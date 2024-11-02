@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Paint</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Selector de colores -->
+      <section>
+        <div>
+          <table>
+            <tr>
+              <td class="color-selector" style="background-color: red;"></td>
+              <td class="color-selector" style="background-color: blue;"></td>
+              <td class="color-selector" style="background-color: green;"></td>
+              <td class="color-selector" style="background-color: yellow;"></td>
+              <td class="color-selector" style="background-color: black;"></td>
+              <td class="color-selector" style="background-color: white;"></td>
+            </tr>
+            <tr class="colorSeleccionado">
+              <td colspan="6" id="selected-color">Color seleccionado: Blanco</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tabla de dibujo -->
+      <section>
+        <div id="drawing-grid"></div>
+        <button id="reset-button">Reiniciar</button>
+      </section>
+    </main>
+
+    <script src="../Biblioteca/funciones.js"></script>
+  </body>
 </html>
