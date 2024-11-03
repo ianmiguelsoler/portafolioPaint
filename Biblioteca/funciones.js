@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Variables
   let selectedColor = "white"; // Color seleccionado inicialmente es blanco
+  let isPainting = false; // Estado para indicar si se está pintando
 
   // Selecciona los elementos
   const colorCells = document.querySelectorAll(".color-selector");
@@ -29,12 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cambia el color de la celda al hacer clic
     cell.addEventListener("click", () => {
-      cell.style.backgroundColor = selectedColor;
+      isPainting = !isPainting; // Alterna el estado de pintar
+      cell.style.backgroundColor = selectedColor; // Pinta la celda actual
     });
 
-    // Cambia el color de la celda al pasar el ratón mientras está presionado el botón
-    cell.addEventListener("mouseover", (e) => {
-      if (e.buttons === 1) { // Detecta si el botón izquierdo del ratón está presionado
+    // Cambia el color de la celda al pasar el ratón sin necesidad de hacer clic adicional
+    cell.addEventListener("mouseover", () => {
+      if (isPainting) { // Solo pinta si está en modo de pintar
         cell.style.backgroundColor = selectedColor;
       }
     });

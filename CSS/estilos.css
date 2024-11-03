@@ -82,7 +82,7 @@ section:first-of-type table {
 #drawing-grid {
   display: grid;
   grid-template-columns: repeat(60, 10px);
-  gap: 1px;
+  
   background-color: #fff;
   padding: 10px;
   border: 2px solid #ddd;
