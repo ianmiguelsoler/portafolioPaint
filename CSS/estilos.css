@@ -8,11 +8,12 @@ body {
   margin: 0;
   background-color: #f30000;
   background-image: url('../Recursos/fondo.webp');
-  background-repeat: repeat; /* Repite la imagen en ambas direcciones */
-  background-size: 700px 700px; /* Ajusta el tamaño de la imagen repetitiva */
-  background-attachment: fixed; /* Fija el fondo para un efecto parallax */
-  background-position: center; /* Centra la imagen */
+  background-repeat: repeat;
+  background-size: 700px 700px;
+  background-attachment: fixed;
+  background-position: center;
 }
+
 /* Estilo para centrar el título h1 en la parte superior */
 h1 {
   width: 100%;
@@ -24,14 +25,14 @@ h1 {
   padding: 20px 0;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el título */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar contraste */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 main {
   display: flex;
-  margin-top: 80px; /* Espacio para el título fijo */
+  margin-top: 80px;
   gap: 20px;
   padding: 20px;
   background-color: #f0f0f0;
@@ -51,7 +52,7 @@ section:first-of-type {
 section:first-of-type table {
   width: 100%;
   text-align: center;
-  border-spacing: 10px; /* Espaciado entre celdas */
+  border-spacing: 10px;
 }
 
 /* Estilos para el contenedor del color seleccionado */
@@ -59,7 +60,7 @@ section:first-of-type table {
   text-align: center;
   font-weight: bold;
   padding: 15px;
-  background-color: #26c1ff; /* Color de fondo por defecto */
+  background-color: #26c1ff;
   color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -72,7 +73,7 @@ section:first-of-type table {
 .color-selector {
   width: 35px;
   height: 35px;
-  border-radius: 50%; /* Hace que las celdas sean circulares */
+  border-radius: 50%;
   cursor: pointer;
   border: 2px solid #ddd;
   transition: transform 0.2s, box-shadow 0.3s ease;
@@ -84,8 +85,8 @@ section:first-of-type table {
 
 /* Estilo para el color seleccionado con borde negro separado */
 .color-selector.selected {
-  border-color: transparent; /* Quitamos el borde original */
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000; /* Separación y borde negro */
+  border-color: transparent;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000;
 }
 
 /* Estilo para el botón de reinicio */
@@ -94,7 +95,7 @@ section:first-of-type table {
   padding: 12px 20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #ff6b6b; /* Color de fondo atractivo */
+  background-color: #ff6b6b;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -112,10 +113,9 @@ section:first-of-type table {
 
 /* Animación al hacer clic */
 #reset-button:active {
-  transform: scale(0.95); /* Reducir tamaño ligeramente al presionar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al hacer clic */
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Estilos para la cuadrícula de dibujo a la derecha */
 #drawing-grid {
