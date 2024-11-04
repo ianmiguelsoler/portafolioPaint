@@ -3,8 +3,8 @@ import {
   actualizarColorSeleccionado,
   generarCuadricula,
   pintarCelda,
-  reiniciarCuadricula
-} from './funciones.js';
+  reiniciarCuadricula,
+} from "./funciones.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const colorTable = document.querySelector("section:first-of-type table");
@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Delegación de eventos para seleccionar color.
   colorTable.addEventListener("click", (event) => {
     if (event.target.classList.contains("color-selector")) {
-      document.querySelectorAll('.color-selector').forEach((el) => {
-        el.classList.remove('selected');
+      document.querySelectorAll(".color-selector").forEach((el) => {
+        el.classList.remove("selected");
       });
-      event.target.classList.add('selected');
+      event.target.classList.add("selected");
       actualizarColorSeleccionado(event.target);
       selectedColor = event.target.style.backgroundColor;
     }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función para activar los eventos de pintura en la cuadrícula.
   const activarPintura = () => {
-    drawingGrid.querySelectorAll("div").forEach(cell => {
+    drawingGrid.querySelectorAll("div").forEach((cell) => {
       cell.addEventListener("click", () => {
         isPainting = !isPainting;
         pintarCelda(cell, selectedColor);
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   activarPintura(); // Activar eventos de pintura en las celdas.
 
   // Evento de reinicio de cuadrícula.
-   botonReiniciar.addEventListener("click", () => {
+  botonReiniciar.addEventListener("click", () => {
     reiniciarCuadricula(drawingGrid, "white");
   });
 });
