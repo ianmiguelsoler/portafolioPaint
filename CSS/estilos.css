@@ -6,11 +6,32 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #f30000;
+  background-image: url('../Recursos/fondo.webp');
+  background-repeat: repeat; /* Repite la imagen en ambas direcciones */
+  background-size: 700px 700px; /* Ajusta el tamaño de la imagen repetitiva */
+  background-attachment: fixed; /* Fija el fondo para un efecto parallax */
+  background-position: center; /* Centra la imagen */
+}
+/* Estilo para centrar el título h1 en la parte superior */
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el título */
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar contraste */
 }
 
 main {
   display: flex;
+  margin-top: 80px; /* Espacio para el título fijo */
   gap: 20px;
   padding: 20px;
   background-color: #f0f0f0;
@@ -70,20 +91,31 @@ section:first-of-type table {
 /* Estilo para el botón de reinicio */
 #reset-button {
   width: 100%;
-  padding: 10px;
+  padding: 12px 20px;
   font-size: 16px;
-  background-color: #f0f0f0;
-  color: #333;
-  border: 2px solid #ddd;
+  font-weight: bold;
+  background-color: #ff6b6b; /* Color de fondo atractivo */
+  color: #fff;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.2s;
-  margin-top: 20px; /* Espacio entre el botón y el resto de los elementos */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
 }
 
+/* Estilo al pasar el cursor */
 #reset-button:hover {
-  background-color: #ddd;
+  background-color: #ff4a4a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* Animación al hacer clic */
+#reset-button:active {
+  transform: scale(0.95); /* Reducir tamaño ligeramente al presionar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al hacer clic */
+}
+
 
 /* Estilos para la cuadrícula de dibujo a la derecha */
 #drawing-grid {
