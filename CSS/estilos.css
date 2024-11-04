@@ -30,34 +30,41 @@ section:first-of-type {
 section:first-of-type table {
   width: 100%;
   text-align: center;
+  border-spacing: 10px; /* Espaciado entre celdas */
 }
 
-/* Estilo para el color seleccionado */
+/* Estilos para el contenedor del color seleccionado */
 #selected-color {
   text-align: center;
   font-weight: bold;
-  padding: 10px;
-  background-color: #26c1ff;
+  padding: 15px;
+  background-color: #26c1ff; /* Color de fondo por defecto */
+  color: #fff;
   border-radius: 20px;
-  color: white;
-  margin-top: 10px; /* Añadido margen superior */
-  margin-bottom: 20px; /* Espacio adicional entre el selector de color y la tabla */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
 }
 
 /* Estilos para los selectores de colores */
 .color-selector {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%; /* Hace que las celdas sean circulares */
   cursor: pointer;
   border: 2px solid #ddd;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.3s ease;
 }
 
 .color-selector:hover {
   transform: scale(1.1);
-  border-color: #aaa;
+}
+
+/* Estilo para el color seleccionado con borde negro separado */
+.color-selector.selected {
+  border-color: transparent; /* Quitamos el borde original */
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000; /* Separación y borde negro */
 }
 
 /* Estilo para el botón de reinicio */
@@ -82,7 +89,6 @@ section:first-of-type table {
 #drawing-grid {
   display: grid;
   grid-template-columns: repeat(60, 10px);
-  
   background-color: #fff;
   padding: 10px;
   border: 2px solid #ddd;
