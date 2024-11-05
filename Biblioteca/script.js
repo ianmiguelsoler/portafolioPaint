@@ -31,26 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const cols = 60;
   generarCuadricula(drawingGrid, rows, cols, "white");
 
-  // Función para activar los eventos de pintura en la cuadrícula.
-  const activarPintura = () => {
-    drawingGrid.querySelectorAll("div").forEach((cell) => {
-      cell.addEventListener("click", () => {
-        isPainting = !isPainting;
-        pintarCelda(cell, selectedColor);
-      });
+  // Alternar `isPainting` al hacer clic en una celda y pintar mientras `isPainting` esté activo.
+  drawingGrid.addEventListener("click", (event) => {
+    if (event.target.tagName === "DIV") {
+      isPainting = !isPainting;  // Alterna el estado de `isPainting`
+      pintarCelda(event.target, selectedColor);  // Pinta la celda clicada
+    }
+  });
 
-      cell.addEventListener("mouseover", () => {
-        if (isPainting) {
-          pintarCelda(cell, selectedColor);
-        }
-      });
-    });
-  };
-
-  activarPintura(); // Activar eventos de pintura en las celdas.
+  // Pintar celdas al pasar el ratón mientras `isPainting` esté activo.
+  drawingGrid.addEventListener("mouseover", (event) => {
+    if (isPainting && event.target.tagName === "DIV") {
+      pintarCelda(event.target, selectedColor);
+    }
+  });
 
   // Evento de reinicio de cuadrícula.
   botonReiniciar.addEventListener("click", () => {
     reiniciarCuadricula(drawingGrid, "white");
+    isPainting = false;  // Asegurarse de que `isPainting` esté desactivado al reiniciar
   });
 });
