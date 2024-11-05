@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Alternar `isPainting` al hacer clic en una celda y pintar mientras `isPainting` esté activo.
   drawingGrid.addEventListener("click", (event) => {
     if (event.target.tagName === "DIV") {
-      isPainting = !isPainting;  // Alterna el estado de `isPainting`
-      pintarCelda(event.target, selectedColor);  // Pinta la celda clicada
+      isPainting = !isPainting;  // Alterna el estado de `isPainting`.
+      pintarCelda(event.target, selectedColor);  // Pinta la celda clicada.
     }
   });
 
@@ -49,6 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Evento de reinicio de cuadrícula.
   botonReiniciar.addEventListener("click", () => {
     reiniciarCuadricula(drawingGrid, "white");
-    isPainting = false;  // Asegurarse de que `isPainting` esté desactivado al reiniciar
+    isPainting = false;  // Asegurarse de que `isPainting` esté desactivado al reiniciar.
   });
 });

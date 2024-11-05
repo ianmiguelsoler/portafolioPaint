@@ -133,3 +133,37 @@ section:first-of-type table {
   background-color: white;
   border: 1px solid #eee;
 }
+
+.color-rojo {
+  background-color: red;
+}
+
+.color-azul {
+  background-color: blue;
+}
+
+.color-verde {
+  background-color: green;
+}
+
+.color-amarillo {
+  background-color: yellow;
+}
+
+.color-negro {
+  background-color: black;
+}
+
+.color-blanco {
+  background-color: white;
+}
+
+.celda-dibujo {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+}
+
+.clase-blanco-inicial {
+  background-color: white;
+}
